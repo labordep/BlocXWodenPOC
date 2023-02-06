@@ -127,13 +127,20 @@ WDBlExample class >> openWodenSceneGraphInBlocSDL2Window [
 	
 	"Create a woden scene graph and add it in the Bloc window"
 	scene := self buildWodenSceneAnimatedFox.
-	
 	"Convert the scene into a Bloc element with Alexandrie Backend display"
 	blElement := self convertWodenSceneToBlElementWithAlexandrie: scene.
+	blElement size: 640@720.
+	space root addChild: blElement.
+	
+	"Create a woden scene graph and add it in the Bloc window"
+	scene := self buildWodenSceneExampleAnimatedCube.
+	"Convert the scene into a Bloc element with Alexandrie Backend display"
+	blElement := self convertWodenSceneToBlElementWithAlexandrie: scene.
+	blElement size: 640@720; relocate: 640@0.
 	space root addChild: blElement.
 	
 	blElement := self buildBlElement.
-	blElement relocate: 300@50.
+	blElement relocate: 400@50.
 	space root addChild: blElement.
 	
 	^space
