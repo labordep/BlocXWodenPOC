@@ -4,7 +4,7 @@ This project is a proof of concept to explore and test to mix Bloc views and Wod
 
 ```smalltalk
 Metacello new
-   baseline: 'BlocXWodenPOC';
+   baseline: 'BlocXWoden';
    repository: 'github://labordep/BlocXWodenPOC:main';
 	onConflictUseIncoming;
 	ignoreImage;
